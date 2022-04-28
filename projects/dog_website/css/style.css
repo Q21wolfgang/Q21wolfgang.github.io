@@ -1,0 +1,240 @@
+/*----------------------------------*/
+/* -------------OVERALL-------------*/
+/*----------------------------------*/
+* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+.clearfloat{
+	float:none;
+	clear:both;
+}
+body {
+	background-color:#fff;
+	color:#fff;
+	font-size:20px;
+	font-family: "lato", san-serif, Arial;
+	letter-spacing:1px;
+	word-spacing:3px;
+	font-weight:300;
+}
+a {
+	color:#fff;
+	text-decoration:none;
+}
+h1{
+	text-transform:uppercase;
+	margin-bottom:20px;
+	font-size:48px;
+}
+h2{
+	text-transform:uppercase;
+	margin:40px 0;
+	font-size:38px;
+}
+h4{
+	margin:10px;
+	font-size:30px;
+}
+/*----------------------------------*/
+/* -------------HEADER--------------*/
+/*----------------------------------*/
+#head {
+	background-image:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url(../img/dog1.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center;
+	background-attachment:fixed;
+	height:100vh;
+	position:relative;
+}
+.set-page-height{
+	height:100vh;
+}
+.hidden-nav{
+	background-color:rgb(64,134,255);
+	display:none;
+	position:fixed;
+	width:100%;
+	z-index:1;
+	box-shadow: 3px 0 5px #555;
+}
+.hidden-main-nav {
+	float:right;
+	list-style:none;
+	
+}
+.hidden-nav-list{
+	/*border-bottom:2px solid transparent;*/
+	display:inline-block;
+	padding:15px;
+	
+}
+.hidden-nav-list a{
+	text-transform:uppercase;
+	font-size:15px;
+	
+}
+.main-nav{
+	float:right;
+	list-style:none;
+	margin:10px 40px 0 0;
+}
+.main-nav-list{
+	border-bottom:2px solid transparent;
+	margin:15px;
+	display:inline-block;
+}
+.main-nav-list a{
+	text-transform:uppercase;
+	font-size:18px;
+}
+.main-text{
+	position:absolute;
+	width:100%;
+	text-align:center;
+	top:45%;
+	
+}
+/*----------------------------------*/
+/*-------------BUTTONS--------------*/
+/*----------------------------------*/
+.btn {
+	color:black;
+	display:inline-block;
+	padding:15px;
+	border-radius:100px;
+	border:3px solid rgb(64,134,255);
+	word-spacing:0px;	
+}
+.full-btn{
+	background-color:rgb(64,134,255);
+	color:white;
+}
+.ghost-btn{
+	color:rgb(64,134,255);
+}
+.serv-btn {
+	background-color:#fff;
+	color:rgb(64,134,255);
+	padding:10px;
+	position:absolute;
+	bottom:0;
+	transform: translate(-50%,-50%);
+	word-spacing:0;
+	border-radius:100px;
+}
+.bot-btn{
+	color:white;
+	width:100%;
+	padding:10px 0;
+	display:block
+}
+/*----------------------------------*/
+/*-------------CONTAINER------------*/
+/*----------------------------------*/
+.container{
+	color:rgb(64,134,255);
+	width:100%;
+	margin:auto;
+	text-align:center;
+}
+.container p {
+	width:85%;
+	margin:0 auto 20px auto;
+}
+.services{
+	background-color:rgb(64,134,255);
+	color:#fff;
+	border:3px solid rgb(0,225,0);
+	margin:20px;
+	min-width:600px;
+	display:inline-block;
+	vertical-align:top;
+	box-shadow:3px 3px 5px #888;
+	position:relative;
+}
+.offer{
+	margin-left:50px;
+	text-align:left;
+	padding-bottom:80px;
+}
+.bot-services{
+	margin-bottom:40px;
+}
+/*----------------------------------*/
+/* -------------GALLERY-------------*/
+/*----------------------------------*/
+.contain{
+	width:95%;
+	margin:auto;
+	margin-bottom:25px;
+}
+.contain-text{
+	padding:80px 0 25px 0;
+}
+.contain-text h2{
+	text-transform:uppercase;
+}
+.contain-img{
+	background-color:#000;
+	height:300px;
+	width:450px;
+	border:2px solid #000;
+	display:inline-block;
+	margin:10px;
+	border-radius:3%;
+	box-shadow:3px 3px 5px #888;
+}
+/*----------------------------------*/
+/* -------------FOOTER--------------*/
+/*----------------------------------*/
+footer{
+	background-color:rgb(64,134,255);
+	text-align:center;
+	padding-top:40px;
+}
+.bot-bot{
+	margin-bottom:40px;
+}
+footer p{
+	font-size:15px;
+}
+/*----------------------------------*/
+/* -------------PSUEDO--------------*/
+/*----------------------------------*/
+.hidden-nav-list:hover{
+	background-color:#fff;
+	transition: .3s;
+}
+.hidden-nav-list a:hover{
+	
+}
+.main-nav-list:hover{
+	border-bottom: rgb(64,134,255) 2px solid;
+	padding-bottom:8px;
+	transition: .3s;
+}
+.full-btn:hover{
+	background-color:rgb(94,164,255);
+	border:3px solid rgb(94,164,255);
+	color:#fff;
+	transition: .5s;
+}
+.ghost-btn:hover{
+	border:3px solid rgb(94,164,255);
+	background-color:rgb(94,164,255);
+	color:#fff;
+	transition: .5s;
+}
+.serv-btn:hover{
+	background-color:rgb(0,225,0);
+	color:#fff;
+	transition: .3s;
+}
+.bot-btn:hover{
+	background-color:#fff;
+	color:rgb(64,134,255);
+	transition: .5s;
+}

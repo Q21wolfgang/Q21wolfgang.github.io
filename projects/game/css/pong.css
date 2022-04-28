@@ -1,0 +1,34 @@
+
+#pong{
+	background-color:#000;
+	border:2px solid #000;
+	
+}
+#main_menu{
+	background-color:#000;
+	color:#fff;
+	position:absolute;
+	border:2px solid #000;
+	z-index:1;
+}
+#main_menu_h1, .main_menu_p{
+	font-family:Impact;
+}
+#main_menu_h1{
+	width:100%;
+	text-align:center;
+	margin:50px 0;
+	font-size:100px;
+	letter-spacing:3px;
+}
+.main_menu_p{
+	position:absolute;
+	left:50%;
+	top:45%;
+	transform:translateX(-50%);
+	font-size:35px;
+	cursor:pointer;
+}
+#options{
+	top:55%;
+}

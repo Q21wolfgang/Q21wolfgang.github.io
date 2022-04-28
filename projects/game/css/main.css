@@ -1,0 +1,82 @@
+.clearfloat{
+	float:none;
+	clear:both;
+}
+* {
+	padding:0;
+	margin:0;
+	cursor:default;
+	font-family:sans-serif
+}
+html{
+	background-color:#ccc;
+}
+body {
+	height:100%;
+	overflow-x:hidden;	
+	padding-bottom:250px;
+}
+#header{
+	background-color:#FF5412;
+	margin-bottom:50px;
+	padding:20px;
+	
+}
+.nav_li{
+	display:inline;
+	font-size:24px;
+	margin:10px;
+}
+a{
+	text-decoration:none;
+	color:#000;
+	cursor:pointer;
+}
+#main_container{
+	background:#3B707D;
+	width:1000px;
+	position:absolute;
+	left:50%;
+	transform:translateX(-50%);
+	border-radius:0 0 5% 5%;
+	border:2px solid black;
+	padding-bottom:50px;
+}
+#canvas_holder{
+	width:80%;
+	margin:auto;
+}
+#instructions{
+	width:80%;
+	margin:auto;
+	margin-top:20px;
+	background-color:#FFB85D;
+	color:#000;
+	border:2px solid #000;
+}
+#innerInstructions{
+	margin:15px;
+}
+#instructHead{
+	font-size:32px;
+}
+#howTo{
+	font-size:28px
+}
+p, #howToList{
+	font-size:22px;
+}
+#howToList{
+	margin-left:50px;
+	list-style-type:none;
+	line-height: 1.6;
+}
+#background_canvas{
+	position:fixed;
+	z-index:-1;
+}
+
+/*///////////////////////////// Psuedo ////////////////////////////////////*/
+body::-webkit-scrollbar{
+	display:none;
+}

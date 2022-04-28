@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Shooter</title>
+		<style>
+			* {
+				margin:0;
+				padding:0;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" style="border:1px solid black" width="800" height="600"></canvas>
+		<script src="js/Entities.js"></script>
+		<script>
+			var c = document.getElementById("canvas").getContext("2d");
+			c.font = "30px arial";
+			///////////////// Varibles ///////////////////////////////////////
+			var game = {
+				width:800,
+				height:600
+			}
+			var paused = false;
+			var Img = {};
+			Img.player = new Image();
+			Img.player.src = "img/player.png";
+			Img.enemy = new Image();
+			Img.enemy.src = "img/enemy.png";
+			Img.bullet = new Image();
+			Img.bullet.src = "img/bullet.png";
+			Img.upgrade1 = new Image();
+			Img.upgrade1.src = "img/upgrade1.png";
+			Img.upgrade2 = new Image();
+			Img.upgrade2.src = "img/upgrade2.png";
+			
+			///////////////// EventListeners ////////////////////////////////////////
+			document.onmousemove = function(e){
+				var mouseX = e.clientX;
+				var mouseY = e.clientY
+				
+				mouseX -= game.width/2;
+				mouseY -= game.height/2;
+				
+				player.aimAngle = Math.atan2(mouseY,mouseX)*180/Math.PI;
+			}
+			document.onclick = function(){
+				player.performAttack();
+			}
+			document.onkeydown = function(e){
+				if(e.keyCode == 87){
+					player.up = true;
+				}
+				if(e.keyCode == 83){
+					player.down = true;
+				}
+				if(e.keyCode == 68){
+					player.right = true;
+				}
+				if(e.keyCode == 65){
+					player.left = true;
+				}
+				if(e.keyCode === 80){
+					paused = !paused;
+				}
+			}
+			document.onkeyup = function(e){
+				if(e.keyCode == 87){
+					player.up = false;
+				}
+				if(e.keyCode == 83){
+					player.down = false;
+				}
+				if(e.keyCode == 68){
+					player.right = false;
+				}
+				if(e.keyCode == 65){
+					player.left = false;
+				}
+			}
+			///////////////// Functions ////////////////////////////////////////////
+			rectCollision = function(r1,r2){
+				return r1.x <= r2.x + r2.width
+				&& r2.x <= r1.x + r1.width
+				&& r1.y <= r2.y + r2.height
+				&& r2.y <= r1.y + r1.height;
+			}
+			Maps = function(id,imgSrc,width,height){
+				var self = {
+					id:id,
+					image:new Image(),
+					width,width,
+					height,height,
+				};
+				self.image.src = imgSrc;
+				self.draw = function(){
+					var x = game.width/2 - player.x;
+					var y = game.height/2 - player.y;
+					c.drawImage(self.image,0,0,self.image.width,self.image.height,x,y,self.image.width*2,self.image.height*2);
+				}
+				return self;
+			}
+			currentMap = Maps("test","img/map.png",4000,4000);
+			startGame = function(){
+				frames = 0;
+				player.hp = 10;
+				player.score = 0;
+				player.attackCounter = 0;
+				enemyList = [];
+				upgradeList = [];
+				bulletList = [];
+				createEnemy();
+				createEnemy();
+				createEnemy();
+			}
+			update = function(){
+				if(paused){
+					return;
+				}
+				requestAnimationFrame(update);
+				c.clearRect(0,0,game.width,game.height);
+				currentMap.draw();
+				player.counter++;
+				frames++;
+				
+				
+				if(frames % 500 === 0){
+					createEnemy();
+				}
+				if(frames % 100 === 0){
+					createUpgrade();
+				}
+				if(frames % 75 === 0){
+					player.score += 1;
+				}
+				if(player.counter >= 200){
+					player.attackSpeed = 1;
+				}
+				
+				
+				for(var i in upgradeList){
+					upgradeList[i].update();
+				}
+				for(var i in bulletList){
+					bulletList[i].update();
+				}
+				for(var i in enemyList){
+					enemyList[i].update();
+				}
+				player.update();
+				c.fillText("HP: "+player.hp,0,30);
+				c.fillText("Score: "+player.score,game.width-200,30);
+			}
+			player = Player();
+			startGame();
+			update();
+			
+		</script>
+	</body>
+</html>

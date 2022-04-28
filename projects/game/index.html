@@ -1,0 +1,61 @@
+<DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Red Block</title>
+		<link href="../game/css/main.css" type="text/css" rel="stylesheet">
+		<link href="../game/css/redblock.css" type="text/css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		
+	</head>
+	<body>
+		<div id="main_container">
+			<div id="header"> 
+				<div id="navbar"> 
+					<ul> 
+						<li class="nav_li"><a href="#">Home</a></li> 
+						<li class="nav_li"><a href="../game/pong.html">Games</a></li> 
+						<li class="nav_li"><a href="#">About</a></li> 
+						<li class="nav_li"><a href="#">Contact</a></li> 
+					</ul> 
+				</div> 
+			</div>
+			<div id="canvas_holder">
+				<div id="main_menu">
+					<h1 id="game_name">Red Blocks</h1>
+					<h4 id="play" onclick="play()">Play</h4>
+					<h4 id="option">Option</h4>
+					<h4 id="quit_main">Quit</h4>
+				</div>
+				<div id="death_screen">
+					<div id="container_death">
+						<h1 id="dead">You Died</h1>
+						<h4 id="pa" onclick="playAgain()">Play Again</h4>
+						<h4 id="quit" onclick="mainMenu()">Quit</h4>
+						<div class="clearfloat"></div>
+					</div>
+				</div>
+				<div class="clearfloat"></div>
+				<canvas id="redblock_canvas"></canvas>
+				<script src="../game/js/redblock.js"></script>
+			</div>
+			<div id="instructions">
+				<div id="innerInstructions">
+					<h2 id="instructHead">Intructions</h2></br>
+					<p> This game is as simple as it looks, the goal is to collect as many yellow squares 
+					before you die. Play against your friends to see you can get the highest score.</p></br>
+					<h3 id='howTo'>How To Move</h3></br>
+						<ul id="howToList">
+							<li>- W to move Up</li>
+							<li>- S to move Down</li>
+							<li>- A to move Left</li>
+							<li>- D to move Right</li>
+						</ul>
+					</div>
+ 			</div>
+		</div>
+		
+		<canvas id="background_canvas"></canvas>
+		<script src="../game/js/background.js" type="text/javascript"></script>
+	</body>
+</html>

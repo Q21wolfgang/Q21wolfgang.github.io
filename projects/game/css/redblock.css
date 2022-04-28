@@ -1,0 +1,73 @@
+
+#redblock_canvas {
+	background-color:#fff;
+	border: solid 2px #000;
+	display:block;
+	margin-bottom:30px;
+}
+#main_menu{
+	position:absolute;
+	background-color:#fff;
+	border:2px solid #000;
+	z-index:1;
+}
+#game_name{
+	font-size:50px;
+	width:100%;
+	text-align:center;
+	margin:50px 0;
+}
+#play,#option,#quit_main{
+	position:absolute;
+	font-size:28px;
+	top:40%;
+	left:50%;
+	transform:translateX(-50%);
+	cursor:pointer;
+}
+#option{
+	top:50%;
+}
+#quit_main{
+	top:60%;
+}
+#death_screen{
+	position:absolute;
+	background-color:rgba(200,200,200,.8);
+	border:2px solid #000;
+	display:none;
+}
+#container_death{
+	position:relative;
+	background-color:#fff;
+	width:300px;
+	top:50%;
+	transform:translateY(-50%);
+	margin:auto;
+	padding:50px;
+	border:2px solid #000;
+}
+#dead{
+	text-align:center;
+	margin-top:12%;
+	margin-bottom:60px;
+	font-size:40px;
+}
+#pa,#quit{
+	position:absolute;
+	font-size:22px;
+	top:75%;
+	cursor:pointer;
+}
+#pa{
+	left:15%;
+}
+#quit{
+	right:15%;
+}
+
+/*////////////////// Psudeo ///////////////////////////////////////////// */
+#play:hover,#option:hover,#quit_main:hover,#pa:hover,#quit:hover{
+	color:red;
+	transition:.25s;
+}

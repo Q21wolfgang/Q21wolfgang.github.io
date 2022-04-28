@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portfolio</title> 
+	<link href="css/port.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<div id="title" class="title set-page-height">
+		<div class="content">
+			<h1 id="title-head">Quinn Ludeman</h1>
+			<h3 id="title-text">Aspiring Full Stack Web Developer</h3>
+		</div>
+	</div>
+	<div class="pic-break" id="dirtbike"></div>
+	<div class="aboutme set-page-height">
+		<h1 class="body-head1 body-head-transition1 set-position">About Me</h1>
+		<p class="body-text1 set-position">Hello, my name is Quinn Ludeman, I am 22, and I am an aspiring full stack 
+		web developer and software engineer. I grew up in a small country town outside
+		of Bend Oregon. When I'm not working I like to play videogames, play guitar,
+		listen to death metal, and most importantly I love to ride motorcycles and dirtbikes.</p> 
+	</div>
+	<div class="pic-break" id="javascript"></div>
+	<div class="experience set-page-height animation-box">
+		<h1 id="set-top-1"class="body-head2 set-position">Experince</h1>
+		<p id="set-top-2"class="body-text2 set-position">I'm not gonna lie and say I'm the greatest programmer out there cause I'm
+		not, but I know the basics pretty well. I started programming at the age of fourteen.
+		At sixteen I took a web development class in high school which I loved.
+		From that class to now I have spent countless hours making javascript games,
+		website front ends and playing with different languages. Javascript is my favorite.</p>
+	</div>
+	<div class="pic-break" id="letsago"></div>
+	<div class="projects">
+		<div class="project-head">
+			<h1 class="project-head-header">Projects</h1>
+		</div>
+		<div class="project-container left"><a href="projects/dog_website/index.html">
+			<div class="mini-container">
+			<h1 class="text project-heading">Roseland Grooming</h1>
+			<p class="text project-text">This was gonna be website for my ex girlfriend who was inprocess
+			of becoming a professional dog groomer.</p>
+			</div>
+			<div class="img-container">
+				<img src="img/dog_website.PNG">
+			</div>
+			<div class="clear"></div>
+		</a></div>
+		<div class="project-container right"><a href="projects/game/index.html">
+			<div class="mini-container">
+				<h1 class="text project-heading">Games</h1>
+				<p class="text project-text">My latest project, the goal was to make this a website to
+				showcase my javascript games.</p>
+			</div>
+			<div class="img-container">
+				<img src="img/game.PNG">
+			</div>
+			<div class="clear"></div>
+		</a></div>
+		<div class="project-container left"><a href="projects/jump/Jump.html">
+			<div class="mini-container">
+				<h1 class="text project-heading">Jump</h1>
+				<p class="text project-text">Jump was gonna be a side scrolling game where you have to jump
+				over obstacles and shoot bad guys.</p>
+			</div>
+			<div class="img-container">
+				<img src="img/jump.PNG">
+			</div>
+			<div class="clear"></div>
+		</a></div>
+		<div class="project-container right"><a href="projects/math_site/index.html">
+			<div class="mini-container">
+				<h1 class="text project-heading">Math</h1>
+				<p class="text project-text">This was a project from one of the courses I paid for. They told
+				you what they wanted and you had to build it.</p>
+			</div>
+			<div class="img-container">
+				<img src="img/math.PNG">
+			</div>
+			<div class="clear"></div>
+		</a></div>
+		<div class="project-container left"><a href="projects/pong/index.html">
+			<div class="mini-container">
+			<h1 class="text project-heading">Pong</h1>
+			<p class="text project-text">Classic Pong with my twist. This is actually one of my projects
+			from high school that I thought a lost.</p>
+			</div>
+			<div class="img-container">
+				<img src="img/pong.PNG">
+			</div>
+			<div class="clear"></div>
+		</a></div>
+		<div class="project-container right"><a href="projects/shooter/shooter.html">
+			<div class="mini-container">
+				<h1 class="text project-heading">Shooter</h1>
+				<p class="text project-text">An arena shooter game where you have to stay alive as long 
+				as you can while dodging bullets.</p>
+			</div>
+			<div class="img-container">
+				<img src="img/shooter.PNG">
+			</div>
+			<div class="clear"></div>
+		</a></div>	
+	</div>
+	<div class="footer">
+		<div id="back-to-top">
+			<h5 id="back-to-top-head"><a href="#title">Back to Top</a></h5>
+		</div>
+		<p class="footer-text"> &copy Copywrite 2022</p>
+	</div>
+	<script>
+		window.onbeforeunload = function(){
+			//window.scrollTo(0,0);
+		};
+	
+		const observer1 = new IntersectionObserver(entries => {
+		  entries.forEach(entry => {
+		  const bodyhead1 = entry.target.querySelector('.body-head1');
+			if (entry.isIntersecting) {
+			  bodyhead1.classList.add('body-head-transition1');
+			  return;
+			}
+			bodyhead1.classList.remove('body-head-transition1');
+		  });
+		});
+		observer1.observe(document.querySelector('.aboutme'));
+		
+		const observer2 = new IntersectionObserver(entries => {
+		  entries.forEach(entry => {
+		  const bodyhead2 = entry.target.querySelector('.body-head2');
+			if (entry.isIntersecting) {
+			  bodyhead2.classList.add('body-head-transition2');
+			  return;
+			}
+			bodyhead2.classList.remove('body-head-transition2');
+		  });
+		});
+		observer2.observe(document.querySelector('.experience'));
+		
+		const bodytext1 = document.querySelector('.body-text1');
+		bodytext1.classList.remove('body-text-transition1');
+		const observer3 = new IntersectionObserver(entries => {
+		  entries.forEach(entry => {
+			if (entry.isIntersecting) {
+			  bodytext1.classList.add('body-text-transition1');
+			  return;
+			}
+			bodytext1.classList.remove('body-text-transition1');
+		  });
+		});
+		observer3.observe(document.querySelector('.aboutme'));
+		
+		const bodytext2 = document.querySelector('.body-text2');
+		bodytext2.classList.remove('body-text-transition2');
+		const observer4 = new IntersectionObserver(entries => {
+		  entries.forEach(entry => {
+			if (entry.isIntersecting) {
+			  bodytext2.classList.add('body-text-transition2');
+			  return;
+			}
+			bodytext2.classList.remove('body-text-transition2');
+		  });
+		});
+		observer4.observe(document.querySelector('.experience'));
+	</script>
+	
+</body>
+</html>

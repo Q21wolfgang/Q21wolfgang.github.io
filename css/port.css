@@ -1,0 +1,277 @@
+*{
+	margin:0px;
+	padding:0px;
+	text-decoration:none;
+}
+@font-face{
+	font-family: myFont;
+	src: url(Carta_Magna-line-demo-FFP.ttf);
+}
+@keyframes footer{
+	0% {left:0px;}
+	25%{left:3px;}
+	50%{left:-3px;}
+	75%{left:3px;}
+	100%{left:0px;}
+}
+.clear{
+	float:none;
+	clear:both;
+}
+.set-page-height{
+	height:125vh;
+	
+}
+.set-position{
+	position:absolute;
+}
+#set-top-1{
+	top:390%;
+}
+#set-top-2{
+	top:400%;
+}
+.content{
+	text-align: center;
+	position: absolute;
+	width:100%;
+	margin:auto;
+	top: 35%;
+}
+#title-head{
+	font-size:70px;
+	font-family: myFont;
+}
+#title-text{
+	font-size:27px;
+}
+.body-head1{
+	font-size: 150px;
+	font-family: myFont;
+	width:100%;
+	text-align:center;
+	opacity:1;
+	top:215%;
+}
+@media (prefers-reduced-motion: no-preference){
+	.body-head1 {
+		transition: opacity 3s;
+		transition-delay: 0s;
+	}
+}
+.body-head-transition1{
+	opacity:.05;
+}
+.body-head2{
+	font-size: 150px;
+	font-family: myFont;
+	width:100%;
+	text-align:center;
+	opacity:1;
+	top:215%;
+}
+@media (prefers-reduced-motion: no-preference){
+	.body-head2 {
+		transition: opacity 3s;
+	}
+}
+.body-head-transition2{
+	opacity:.05;
+}
+.body-text1{
+	font-size: 28px;
+	text-align:center;
+	width:75%;
+	left:-1500%;
+	margin:auto;
+	top:225%;
+}
+@media (prefers-reduced-motion: no-preference){
+	.body-text1 {
+		transition: left 2.25s;
+	}
+}
+.body-text-transition1{
+	left:15%;
+}
+.body-text2{
+	font-size: 28px;
+	text-align:center;
+	width:75%;
+	left:-1500%;
+	margin:auto;
+	top:225%;
+}
+@media (prefers-reduced-motion: no-preference){
+	.body-text2 {
+		transition: left 2.5s;
+	}
+}
+.body-text-transition2{
+	left:15%;
+}
+.pic-break{
+	image-rendering:auto;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-attachment:fixed;
+	position:relative;
+	height:50vh;
+}
+#dirtbike{
+	background-image:url(dirtbike.jpg);
+}
+#javascript{
+	background-image:url(javascript.jpg);
+}
+#letsago{
+	background-image:url(mario.webp);
+}
+.projects{
+	
+}
+.project-head-header{
+	font-size:150px;
+	font-family:myFont;
+}
+.project-head{
+	width:100%;
+	text-align:center;
+	padding-bottom:150px;
+	margin-top:200px;
+}
+.project-container{
+	width:50%;
+	min-height:400px;
+	position:relative;
+	margin:40px;
+	border:2px solid black;
+	border-radius:20px;
+	box-shadow: 3px 5px 10px #000;
+	transition: .5s;
+}
+.left{
+	left:5%;
+	background-color:#A5F9FF;
+}
+.right{
+	right:-40%;
+	background-color:#FDD396;
+}
+.text{
+	color:#000;
+	font-size:22px;
+}
+.project-heading{
+	font-size:35px;
+	font-family:myFont;
+	padding:30px;
+}
+.project-text{
+	position:relative;
+	top: 80px;
+	max-width:350px;
+	padding-left:20px;
+}
+.mini-container{
+	width:50%;
+	float:left;
+	margin:20px
+}
+.img-container{
+	float:right;
+	margin-top:30px;
+	margin-right:5px;
+}
+img{
+	width:300px;
+	height:300px;
+	margin:15px;
+	border-radius:50%;
+	box-shadow:2px 4px 8px black;
+}
+.footer{
+	background-color:#000;
+	color:#fff;
+	height:20vh;
+}
+#back-to-top{
+	width:50%;
+	margin:auto;
+	text-align:center;
+	position:relative;
+	top:40px;
+	
+}
+#back-to-top a{
+	color:#fff;
+	font-size:35px;
+	padding:8px;
+	transition:.3s;
+	border-radius:20px;
+	position:relative;
+}
+.footer-text{
+	position:relative;
+	top:88px;
+	width:100%;
+	text-align:center;
+}
+/*//////////////////////// Psudeo //////////////////////////////////////*/
+.project-container:hover{
+	
+}
+.left:hover{
+	width:65%;
+	background-color:#01EFFE;
+	transition: .4s;
+	
+}
+.right:hover{
+	width:65%;
+	right:-25%;
+	background-color:#FA9505;
+	transition: .4s;
+}
+#back-to-top a:hover{
+	animation-name:footer;
+	animation-duration:.2s;
+	background-color:#fff;
+	color:#000;
+	transition:.2s;
+	transition-delay:.2s;
+}
+
+@media only screen and (max-width: 1300px){
+	.project-container {
+		width:65%;
+		margin:auto;
+		position:static;
+		margin-bottom:50px;
+	}
+	img{
+		position:static;
+	}
+}
+@media only screen and (max-width:1170px){
+	img{
+		display:block;
+		margin:auto;
+	}
+	.img-container{
+		width:100%;
+		float:none;
+		margin:auto;
+		margin-top:30px;
+		padding-bottom:20px;
+	}
+	.mini-container{
+		float:none;
+		margin:auto;
+		text-align:center;
+	}
+	.project-text{
+		position:static;
+	}
+}
